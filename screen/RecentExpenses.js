@@ -12,12 +12,16 @@ const RecentExpenses = () => {
 
     const date7Days = getDateMinusDays(date, 7);
 
-    return expenses.date > date7Days;
+    return expenses.date > date7Days && expenses.date < date;
   });
 
   return (
     <View style={{ flex: 1 }}>
-      <ExpensesOutput expenses={recentExpenses} periodName={"Last 7 Days"} />
+      <ExpensesOutput
+        expenses={recentExpenses}
+        periodName={"Last 7 Days"}
+        fallBackText={"No Expenses Register for the last 7 days"}
+      />
     </View>
   );
 };

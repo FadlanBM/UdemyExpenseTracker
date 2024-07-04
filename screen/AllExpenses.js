@@ -7,7 +7,11 @@ const AllExpenses = () => {
   const expensesCtx = useContext(ExpensesContext);
   return (
     <View style={{ flex: 1 }}>
-      <ExpensesOutput expenses={expensesCtx.expenses} periodName={"Total"} />
+      <ExpensesOutput
+        expenses={expensesCtx.expenses}
+        periodName={"Total"}
+        fallBackText={"No Data Expenses"}
+      />
     </View>
   );
 };
