@@ -14,8 +14,8 @@ import RecentExpenses from "./screen/RecentExpenses";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { GlobalStyles } from "./constants/style";
 import { Ionicons } from "@expo/vector-icons";
-import IconButton from "./components/ui/IconButton";
 import ExpensesContextProvider from "./store/expenses_context";
+import IconButton from "./components/atom/IconButton";
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
